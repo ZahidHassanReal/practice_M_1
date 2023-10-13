@@ -2,11 +2,17 @@
 
 
 
-$numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
+$people = [
 
-isEven (1);
-function isEven($n){
-    if($n % 2 == 0){
+    ['name'=>'A','gender'=>'male'],
+    ['name'=>'B','gender'=>'female'],
+    ['name'=>'C','gender'=>'female'],
+    ['name'=>'D','gender'=>'male'],
+    ['name'=>'E','gender'=>'female'],
+];
+
+function isMale($person){
+    if($person['gender']=='male'){
      return true;
     }
 
@@ -15,8 +21,16 @@ function isEven($n){
 
 
 }
+function isFemale($person){
+    if($person['gender']=='female'){
+     return true;
+    }
 
-$evenEnum = array_filter($numbers, "isEven");
+    return false;
+
+}
+
+$males = array_filter($people, "isMale");
 
 
-print_r ($evenEnum);
+print_r ($males);
