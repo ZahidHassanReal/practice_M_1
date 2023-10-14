@@ -1,27 +1,50 @@
 <?php
 
-$books = [
 
-    ["id"=>"1", "title"=>"javascript", "author"=>"manik chad"],
-    ["id"=>"2", "title"=>"php", "author"=>"manik. kalam. ajad"],
-    ["id"=>"3", "title"=>"java", "author"=>"manik"],
-    ["id"=>"4", "title"=>"node", "author"=>"maninka miya avinue"],
-    ["id"=>"5", "title"=>"laravel", "author"=>" AB"],
-    ["id"=>"6", "title"=>"javascript 2", "author"=>"manik chad"],
 
-];
+class Student{
+  
+    public  $name ;
+    public $class ;
+      
 
-function sortByAuthorName($book1, $book2){
-    if(strlen($book1['author']) > strlen($book2['author'])){
-        return -1;
-    }elseif(strlen($book1['author']) < strlen($book2['author'])){
-        return 1;
-}else{
-    return 0;
+
+    function getName()  {
+        return $this->name;
+    }
+    function setName( $name ){
+        $this->name = $name;
+    }
+
+    function getClass()  {
+        return $this->class;
+    }
+    function setClass( $class ){
+        $this->class = $class;
+    }
+
+
+    function printDetails() {
+
+        echo "$this->name is styding in $this->class class." ."\n";
+
+    }
+
 }
+    $student1 = new Student();
 
-}
+    $student2 = new Student();
 
-usort ($books, "sortByAuthorName");
+    $student1 ->setName("rala");
+    $student1 ->setClass("2nd");
 
-print_r($books);
+
+
+
+     $student2 ->setName("manik chan");
+     $student2 ->setClass("5th");
+
+
+
+     $student2 ->printDetails();
+     $student1 ->printDetails();
