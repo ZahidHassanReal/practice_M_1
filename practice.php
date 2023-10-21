@@ -2,49 +2,56 @@
 
 
 
-class Student{
+class Calculator{
   
-    public  $name ;
-    public $class ;
-      
+    public  $a ;
+    public $b ;
+    public $result ;
 
 
-    function getName()  {
-        return $this->name;
+    function getA()  {
+        return $this->a;
     }
-    function setName( $name ){
-        $this->name = $name;
-    }
-
-    function getClass()  {
-        return $this->class;
-    }
-    function setClass( $class ){
-        $this->class = $class;
+    function setA( $a ){
+        $this->a = $a;
     }
 
+    function getB()  {
+        return $this->b;
+    }
+    function setB( $b ){
+        $this->b = $b;
+    }
+    function getResult($a , $b)  {
+        $result= $this->a +$this->b ; 
+        return $this->result;
+    }
+    function setResult( $result ){
+        $this->result = $result;
+    }
 
     function printDetails() {
 
-        echo "$this->name is styding in $this->class class." ."\n";
+        echo " result $this->result BEST." ."\n";
 
     }
 
 }
-    $student1 = new Student();
+    $Myresult = new Calculator();
+    $Myresult ->setResult(2, 3);
+      $Myresult ->printDetails();
+    // $student2 = new Student();
 
-    $student2 = new Student();
-
-    $student1 ->setName("rala");
-    $student1 ->setClass("2nd");
-
-
-
-
-     $student2 ->setName("manik chan");
-     $student2 ->setClass("5th");
+    // $student1 ->setName("rala");
+    // $student1 ->setClass("2nd");
 
 
 
-     $student2 ->printDetails();
-     $student1 ->printDetails();
+
+    //  $student2 ->setName("manik chan");
+    //  $student2 ->setClass("5th");
+
+
+
+    //  $student2 ->printDetails();
+     $Myresult ->printDetails();
